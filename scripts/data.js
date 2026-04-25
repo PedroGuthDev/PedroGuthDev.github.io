@@ -98,7 +98,7 @@ const I18N = {
       "Eu desenho e construo produtos web de ponta a ponta — de interfaces pixel-perfect a APIs resilientes. Trabalho principalmente com <b>TypeScript</b>, <b>React</b>, <b>Next.js</b> e <b>Node.js</b>, transformando problemas reais de negócio em produtos entregues e mensuráveis.",
     ctaPortfolio: "Ver portfólio",
     ctaContact: "Entrar em contato",
-    statYears: "Anos construindo",
+    statYears: "Ano construindo",
     statFull: "Front & back-end",
     statLocation: "Brasil",
     statFullK: "Full-Stack",

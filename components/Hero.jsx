@@ -100,7 +100,7 @@ function Hero() {
 
             <div className="stats">
               <div className="stat">
-                <div className="k">4+</div>
+                <div className="k">1</div>
                 <div className="v">{t("statYears")}</div>
               </div>
               <div className="stat">
