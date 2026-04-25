@@ -1042,13 +1042,13 @@ section {
   flex-direction: column;
   gap: 8px;
   position: relative;
-  overflow: hidden;
 }
 .contact-info::before {
   content: "";
   position: absolute;
-  inset: -40% -20% 40% -20%;
+  inset: 0;
   z-index: 0;
+  border-radius: 24px;
   background: radial-gradient(
     circle at 20% 20%,
     rgba(107, 140, 255, 0.25),
@@ -1108,6 +1108,43 @@ section {
   margin-top: 2px;
   word-break: break-all;
 }
+.copy-btn {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink-dim);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  opacity: 0;
+  transform: scale(0.9);
+}
+.contact-row:hover .copy-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.copy-btn.copied {
+  background: rgba(79, 215, 255, 0.15);
+  border-color: rgba(79, 215, 255, 0.4);
+  color: var(--accent-3);
+  opacity: 1;
+  transform: scale(1);
+}
+@media (max-width: 900px) {
+  .copy-btn {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /* Form */
 .contact-form {
@@ -1118,13 +1155,13 @@ section {
   backdrop-filter: blur(var(--glass-blur)) saturate(140%);
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
   position: relative;
-  overflow: hidden;
 }
 .contact-form::before {
   content: "";
   position: absolute;
-  inset: -40% -20% 40% -20%;
+  inset: 0;
   z-index: 0;
+  border-radius: 24px;
   background: radial-gradient(
     circle at 80% 20%,
     rgba(155, 124, 255, 0.28),
@@ -1183,11 +1220,87 @@ section {
   outline: none;
 }
 .field input:focus,
-.field textarea:focus,
-.field select:focus {
+.field textarea:focus {
   border-color: rgba(155, 124, 255, 0.5);
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 0 0 4px rgba(107, 140, 255, 0.12);
+}
+
+/* Custom Select Dropdown */
+.custom-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+.custom-select-trigger {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  font-size: 14.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.custom-select-trigger:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.custom-select-trigger.open {
+  border-color: rgba(155, 124, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(107, 140, 255, 0.12);
+}
+.custom-select-trigger svg {
+  transition: transform 0.3s var(--ease);
+  opacity: 0.6;
+}
+.custom-select-trigger.open svg {
+  transform: rotate(180deg);
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 15, 36, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 6px;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.6);
+  animation: dropdownReveal 0.25s var(--ease);
+  overflow: hidden;
+}
+@keyframes dropdownReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.custom-option {
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  color: var(--ink-dim);
+}
+.custom-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  padding-left: 18px; /* Slight push effect on hover */
+}
+.custom-option.active {
+  background: rgba(107, 140, 255, 0.2);
+  color: var(--accent-3);
+  font-weight: 500;
 }
 .field textarea {
   resize: vertical;
@@ -1218,6 +1331,24 @@ section {
 }
 .form-success.show {
   display: block;
+}
+.form-error {
+  display: none;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(255, 107, 107, 0.08);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  color: #ff8e8e;
+  font-size: 14px;
+  margin-top: 16px;
+}
+.form-error.show {
+  display: block;
+}
+
+.btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 /* Footer */
