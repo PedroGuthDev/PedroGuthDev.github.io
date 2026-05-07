@@ -1,6 +1,51 @@
 // Shared data for the portfolio
 const PROJECTS = [
   {
+    id: "allesguthfinance",
+    name: "Alles Guth Finance",
+    tagline: {
+      en: "Financial clarity: track spending, budgets, and recurring charges",
+      pt: "Clareza financeira: acompanhe gastos, orçamentos e cobranças recorrentes",
+    },
+    description: {
+      en: "A financial management app that transforms bank statements into actionable insights. Import transactions from CSV, OFX, or PDF: get instant categorization, detect recurring subscriptions, set budgets with alerts, and track your financial health with a single clarity score. Free plan forever or upgrade for premium features.",
+      pt: "Um aplicativo de gestão financeira que transforma extratos bancários em insights acionáveis. Importe transações de CSV, OFX ou PDF: obtenha categorização instantânea, detecte assinaturas recorrentes, defina orçamentos com alertas e acompanhe sua saúde financeira com um único score de clareza. Plano gratuito para sempre ou atualize para recursos premium.",
+    },
+    tags: {
+      en: ["Financial", "SaaS", "Live"],
+      pt: ["Financeiro", "SaaS", "No ar"],
+    },
+    stack: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL"],
+    url: "https://www.allesguthfinance.com",
+    code: null,
+    palette: "p3",
+    slides: [
+      {
+        kind: "img",
+        src: "assets/allesguthfinance/1.png",
+        label: { en: "Dashboard Overview", pt: "Visão Geral do Dashboard" },
+      },
+      {
+        kind: "img",
+        src: "assets/allesguthfinance/2.png",
+        label: {
+          en: "Import & Categorization",
+          pt: "Importação e Categorização",
+        },
+      },
+      {
+        kind: "img",
+        src: "assets/allesguthfinance/3.png",
+        label: { en: "Budgets & Goals", pt: "Orçamentos e Metas" },
+      },
+      {
+        kind: "img",
+        src: "assets/allesguthfinance/4.png",
+        label: { en: "Health Score", pt: "Score de Saúde" },
+      },
+    ],
+  },
+  {
     id: "denise",
     name: "Denise Costura Criativa",
     tagline: {
@@ -8,8 +53,8 @@ const PROJECTS = [
       pt: "Catálogo e e-commerce para uma marca criativa de costura",
     },
     description: {
-      en: "A full product catalog and e-commerce platform built for Denise Costura Criativa — a Brazilian creative sewing studio. Customers can browse collections, view detailed product information and place orders seamlessly across devices.",
-      pt: "Catálogo de produtos completo e plataforma de e-commerce para a Denise Costura Criativa — um ateliê de costura criativa. Clientes podem navegar pelas coleções, visualizar detalhes dos produtos e fazer pedidos com fluidez em qualquer dispositivo.",
+      en: "A full product catalog and e-commerce platform built for Denise Costura Criativa - a Brazilian creative sewing studio. Customers can browse collections, view detailed product information and place orders seamlessly across devices.",
+      pt: "Catálogo de produtos completo e plataforma de e-commerce para a Denise Costura Criativa - um ateliê de costura criativa. Clientes podem navegar pelas coleções, visualizar detalhes dos produtos e fazer pedidos com fluidez em qualquer dispositivo.",
     },
     tags: {
       en: ["E-commerce", "Live", "2024"],
@@ -46,8 +91,8 @@ const PROJECTS = [
     id: "ngconstrua",
     name: "NGconstrua",
     tagline: {
-      en: "High-end real-estate renovations — landing page",
-      pt: "Reformas imobiliárias de alto padrão — landing page",
+      en: "High-end real-estate renovations: landing page",
+      pt: "Reformas imobiliárias de alto padrão: landing page",
     },
     description: {
       en: "Landing page for NGconstrua, a high-standard real-estate renovation business. Focused on conversion and trust: clear service breakdown, a project gallery, testimonials and a direct lead-capture form.",
@@ -95,7 +140,7 @@ const I18N = {
 
     eyebrowHero: "Desenvolvedor Full-Stack",
     heroLead:
-      "Eu desenho e construo produtos web de ponta a ponta — de interfaces pixel-perfect a APIs resilientes. Trabalho principalmente com <b>TypeScript</b>, <b>React</b>, <b>Next.js</b> e <b>Node.js</b>, transformando problemas reais de negócio em produtos entregues e mensuráveis.",
+      "Eu desenho e construo produtos web de ponta a ponta: de interfaces pixel-perfect a APIs resilientes. Trabalho principalmente com <b>TypeScript</b>, <b>React</b>, <b>Next.js</b> e <b>Node.js</b>, transformando problemas reais de negócio em produtos entregues e mensuráveis.",
     ctaPortfolio: "Ver portfólio",
     ctaContact: "Entrar em contato",
     statYears: "Ano construindo",
@@ -116,13 +161,13 @@ const I18N = {
     eyebrowAbout: "Sobre",
     aboutTitle: "Um dev que entrega.",
     aboutSub:
-      "Uma apresentação rápida — quem eu sou, como trabalho e com o que me importo.",
+      "Uma apresentação rápida: quem eu sou, como trabalho e com o que me importo.",
     aboutP1:
-      "Oi, eu sou o <b>Pedro Guth</b> — desenvolvedor full-stack do Brasil. Gosto de transformar ideias de produto ainda difusas em aplicações web limpas, rápidas e bem arquitetadas, que pessoas reais realmente usam.",
+      "Oi, eu sou o <b>Pedro Guth</b> - desenvolvedor full-stack do Brasil. Gosto de transformar ideias de produto ainda difusas em aplicações web limpas, rápidas e bem arquitetadas, que pessoas reais realmente usam.",
     aboutP2:
       "Meu stack vive em torno do ecossistema <b>TypeScript + React + Next.js</b> no front-end, e <b>Node.js + PostgreSQL</b> no back. Me importo muito com detalhes de produto: tipografia, movimento, acessibilidade e as micro-interações que fazem uma interface parecer premium em vez de genérica.",
     aboutP3:
-      "Fora dos projetos, escrevo, experimento com design systems e tento continuar aprendendo — testes com Vitest, infraestrutura, e afiando meu olhar para o detalhe.",
+      "Fora dos projetos, escrevo, experimento com design systems e tento continuar aprendendo: testes com Vitest, infraestrutura, e afiando meu olhar para o detalhe.",
     factBasedL: "Localidade",
     factBasedV: "Brasil · Aberto a remoto",
     factFocusL: "Foco",
@@ -152,7 +197,7 @@ const I18N = {
     phEmail: "voce@empresa.com",
     phPhone: "+55 ...",
     phMsg:
-      "Me conte um pouco sobre o que tem em mente — objetivos, prazo, faixa de orçamento se houver...",
+      "Me conte um pouco sobre o que tem em mente: objetivos, prazo, faixa de orçamento se houver...",
     optProject: "Discutir um projeto",
     optJob: "Vaga / oportunidade",
     optFreelance: "Freelance / contrato",
@@ -160,7 +205,7 @@ const I18N = {
     optOther: "Outro assunto",
     sendBtn: "Enviar mensagem",
     sendingBtn: "Enviando...",
-    sentMsg: "✓ Mensagem enviada. Retorno em breve — obrigado pelo contato.",
+    sentMsg: "✓ Mensagem enviada. Retorno em breve - obrigado pelo contato.",
     errorMsg:
       "✕ Ocorreu um erro ao enviar. Tente novamente ou use os canais diretos.",
 
@@ -174,7 +219,7 @@ const I18N = {
 
     eyebrowHero: "Full-Stack Developer · Available",
     heroLead:
-      "I design and build web products end-to-end — from pixel-true interfaces to resilient APIs. I work mostly with <b>TypeScript</b>, <b>React</b>, <b>Next.js</b> and <b>Node.js</b>, turning real business problems into shipped, measurable products.",
+      "I design and build web products end-to-end: from pixel-true interfaces to resilient APIs. I work mostly with <b>TypeScript</b>, <b>React</b>, <b>Next.js</b> and <b>Node.js</b>, turning real business problems into shipped, measurable products.",
     ctaPortfolio: "View portfolio",
     ctaContact: "Get in touch",
     statYears: "Years building",
@@ -195,13 +240,13 @@ const I18N = {
     eyebrowAbout: "About",
     aboutTitle: "A builder who ships.",
     aboutSub:
-      "A quick introduction — who I am, how I work, and what I care about.",
+      "A quick introduction: who I am, how I work, and what I care about.",
     aboutP1:
-      "Hi, I'm <b>Pedro Guth</b> — a full-stack developer from Brazil. I love turning fuzzy product ideas into clean, fast, well-architected web apps that real people actually use.",
+      "Hi, I'm <b>Pedro Guth</b> - a full-stack developer from Brazil. I love turning fuzzy product ideas into clean, fast, well-architected web apps that real people actually use.",
     aboutP2:
       "My stack lives around the <b>TypeScript + React + Next.js</b> ecosystem on the front-end, and <b>Node.js + PostgreSQL</b> on the back. I care a lot about product details: typography, motion, accessibility, and the small interactions that make interfaces feel premium instead of generic.",
     aboutP3:
-      "Outside client work, I write, experiment with design systems and try to keep learning — testing with Vitest, exploring infrastructure, and sharpening my taste for craft.",
+      "Outside client work, I write, experiment with design systems and try to keep learning: testing with Vitest, exploring infrastructure, and sharpening my taste for craft.",
     factBasedL: "Based in",
     factBasedV: "Brazil · Remote-friendly",
     factFocusL: "Focus",
@@ -231,7 +276,7 @@ const I18N = {
     phEmail: "you@company.com",
     phPhone: "+55 ...",
     phMsg:
-      "Tell me a bit about what you have in mind — goals, timeline, budget range if any...",
+      "Tell me a bit about what you have in mind: goals, timeline, budget range if any...",
     optProject: "Discuss a project",
     optJob: "Job / role opportunity",
     optFreelance: "Freelance / contract",
@@ -240,7 +285,7 @@ const I18N = {
     sendBtn: "Send message",
     sendingBtn: "Sending...",
     sentMsg:
-      "✓ Message sent. I'll get back to you soon — thanks for reaching out.",
+      "✓ Message sent. I'll get back to you soon - thanks for reaching out.",
     errorMsg: "✕ Failed to send. Please try again or use the direct channels.",
 
     footer: "Designed & built with care.",

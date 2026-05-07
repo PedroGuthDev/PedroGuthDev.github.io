@@ -1443,6 +1443,11 @@ section {
   .about-photo {
     min-height: 320px;
   }
+  .project-meta .stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
 }
 
 /* placeholder project images — pure CSS art */
