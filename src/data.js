@@ -1,4 +1,4 @@
-const PROJECTS = [
+export const PROJECTS = [
   {
     id: "allesguthfinance",
     name: "Alles Guth Finance",
@@ -19,10 +19,10 @@ const PROJECTS = [
     code: null,
     palette: "finance",
     slides: [
-      { kind: "img", src: "assets/allesguthfinance/1.png", label: { en: "Dashboard overview", pt: "Visão geral do dashboard" } },
-      { kind: "img", src: "assets/allesguthfinance/2.png", label: { en: "Import and categorization", pt: "Importação e categorização" } },
-      { kind: "img", src: "assets/allesguthfinance/3.png", label: { en: "Budgets and goals", pt: "Orçamentos e metas" } },
-      { kind: "img", src: "assets/allesguthfinance/4.png", label: { en: "Health score", pt: "Score de saúde" } },
+      { kind: "img", src: "/assets/allesguthfinance/1.png", label: { en: "Dashboard overview", pt: "Visão geral do dashboard" } },
+      { kind: "img", src: "/assets/allesguthfinance/2.png", label: { en: "Import and categorization", pt: "Importação e categorização" } },
+      { kind: "img", src: "/assets/allesguthfinance/3.png", label: { en: "Budgets and goals", pt: "Orçamentos e metas" } },
+      { kind: "img", src: "/assets/allesguthfinance/4.png", label: { en: "Health score", pt: "Score de saúde" } },
     ],
   },
   {
@@ -45,10 +45,10 @@ const PROJECTS = [
     code: null,
     palette: "atelier",
     slides: [
-      { kind: "img", src: "assets/denisecosturacriativa/home.webp", label: { en: "Home page", pt: "Página inicial" } },
-      { kind: "img", src: "assets/denisecosturacriativa/catalogo.webp", label: { en: "Product catalog", pt: "Catálogo de produtos" } },
-      { kind: "img", src: "assets/denisecosturacriativa/paginadeproduto.webp", label: { en: "Product detail", pt: "Detalhe do produto" } },
-      { kind: "img", src: "assets/denisecosturacriativa/painelAdmin.webp", label: { en: "Admin dashboard", pt: "Painel administrativo" } },
+      { kind: "img", src: "/assets/denisecosturacriativa/home.webp", label: { en: "Home page", pt: "Página inicial" } },
+      { kind: "img", src: "/assets/denisecosturacriativa/catalogo.webp", label: { en: "Product catalog", pt: "Catálogo de produtos" } },
+      { kind: "img", src: "/assets/denisecosturacriativa/paginadeproduto.webp", label: { en: "Product detail", pt: "Detalhe do produto" } },
+      { kind: "img", src: "/assets/denisecosturacriativa/painelAdmin.webp", label: { en: "Admin dashboard", pt: "Painel administrativo" } },
     ],
   },
   {
@@ -71,15 +71,15 @@ const PROJECTS = [
     code: null,
     palette: "build",
     slides: [
-      { kind: "img", src: "assets/ngconstrua/hero.webp", label: { en: "Hero section", pt: "Seção principal" } },
-      { kind: "img", src: "assets/ngconstrua/servicos.webp", label: { en: "Services", pt: "Serviços" } },
-      { kind: "img", src: "assets/ngconstrua/slidablePortifolio.webp", label: { en: "Project portfolio", pt: "Portfólio de projetos" } },
-      { kind: "img", src: "assets/ngconstrua/contactFooter.webp", label: { en: "Contact section", pt: "Seção de contato" } },
+      { kind: "img", src: "/assets/ngconstrua/hero.webp", label: { en: "Hero section", pt: "Seção principal" } },
+      { kind: "img", src: "/assets/ngconstrua/servicos.webp", label: { en: "Services", pt: "Serviços" } },
+      { kind: "img", src: "/assets/ngconstrua/slidablePortifolio.webp", label: { en: "Project portfolio", pt: "Portfólio de projetos" } },
+      { kind: "img", src: "/assets/ngconstrua/contactFooter.webp", label: { en: "Contact section", pt: "Seção de contato" } },
     ],
   },
 ];
 
-const I18N = {
+export const I18N = {
   pt: {
     navOverview: "Início",
     navPortfolio: "Trabalho",
@@ -91,7 +91,7 @@ const I18N = {
     eyebrowHero: "Desenvolvedor full-stack disponível",
     heroTitle: "Engenharia clara para produtos web bem acabados.",
     heroLead:
-      "Sou <b>Pedro Guth</b>, dev full-stack no Brasil. Projeto, construo e coloco no ar aplicações web com <b>TypeScript</b>, <b>React</b>, <b>Next.js</b>, <b>Node.js</b> e <b>PostgreSQL</b>.",
+      "Sou <b>Pedro Guth</b>, dev full-stack no Brasil. Projeto, construo e coloco no ar aplicações web com:",
     ctaPortfolio: "Ver trabalhos",
     ctaContact: "Começar conversa",
     proofLabel: "Resumo profissional",
@@ -101,6 +101,8 @@ const I18N = {
     statLocation: "Brasil, remoto",
     statFullK: "Full-stack",
     statLocK: "BR",
+    statCoffeeK: "1.240",
+    statCoffee: "cafés consumidos",
     heroBoardLabel: "Retrato e projeto em destaque",
     portraitCaption: "Produto, código e entrega",
     featuredWork: "Destaque",
@@ -171,6 +173,7 @@ const I18N = {
     errorMsg: "Não consegui enviar. Tente novamente ou use um canal direto.",
 
     footer: "Projetado e construído com cuidado.",
+    skipToContent: "Pular para o conteúdo",
   },
   en: {
     navOverview: "Home",
@@ -183,7 +186,7 @@ const I18N = {
     eyebrowHero: "Available full-stack developer",
     heroTitle: "Clear engineering for carefully finished web products.",
     heroLead:
-      "I'm <b>Pedro Guth</b>, a full-stack developer in Brazil. I design, build, and ship web applications with <b>TypeScript</b>, <b>React</b>, <b>Next.js</b>, <b>Node.js</b>, and <b>PostgreSQL</b>.",
+      "I'm <b>Pedro Guth</b>, a full-stack developer in Brazil. I design, build, and ship web applications with:",
     ctaPortfolio: "View work",
     ctaContact: "Start a conversation",
     proofLabel: "Professional summary",
@@ -193,6 +196,8 @@ const I18N = {
     statLocation: "Brazil, remote",
     statFullK: "Full-stack",
     statLocK: "BR",
+    statCoffeeK: "1,240",
+    statCoffee: "coffees consumed",
     heroBoardLabel: "Portrait and featured project",
     portraitCaption: "Product, code, delivery",
     featuredWork: "Featured",
@@ -263,19 +268,11 @@ const I18N = {
     errorMsg: "I could not send that. Please try again or use a direct channel.",
 
     footer: "Designed and built with care.",
+    skipToContent: "Skip to content",
   },
 };
 
-window.__lang = "pt";
-window.__langListeners = [];
-window.setLang = (lang) => {
-  window.__lang = lang;
-  window.__langListeners.forEach((fn) => fn(lang));
-};
-window.t = (key) =>
-  (I18N[window.__lang] && I18N[window.__lang][key]) || I18N.en[key] || key;
-
-const LANGUAGES = [
+export const LANGUAGES = [
   { short: "TS", full: "TypeScript", level: "Primary language" },
   { short: "React", full: "React", level: "Interfaces" },
   { short: "Next", full: "Next.js", level: "Apps and sites" },
@@ -286,13 +283,16 @@ const LANGUAGES = [
   { short: "Vitest", full: "Vitest", level: "Testing" },
 ];
 
-const NAV_SECTIONS = [
+export const STATS = [
+  { key: "statProjects", val: "3", label: "statProjects" },
+  { key: "statFull", val: "Full-stack", label: "statFull" },
+  { key: "statLoc", val: "BR", label: "statLocation" },
+  { key: "statCoffee", val: "1.240", label: "statCoffee" },
+];
+
+export const NAV_SECTIONS = [
   { id: "overview", label: "Home" },
   { id: "portfolio", label: "Work" },
   { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
-
-window.PROJECTS = PROJECTS;
-window.LANGUAGES = LANGUAGES;
-window.NAV_SECTIONS = NAV_SECTIONS;
