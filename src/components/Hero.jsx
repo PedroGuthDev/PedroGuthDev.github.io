@@ -1,6 +1,6 @@
-import React from 'react';
-import { useI18n } from '../hooks/useI18n';
-import { PROJECTS, LANGUAGES, STATS } from '../data';
+import React from "react";
+import { useI18n } from "../hooks/useI18n";
+import { PROJECTS, LANGUAGES, STATS } from "../data";
 
 export function Hero() {
   const { t, lang } = useI18n();
@@ -24,7 +24,15 @@ export function Hero() {
           <div className="stack-rail" aria-label={t("stackLabel")}>
             {tags.map((item) => (
               <span key={item.full}>{item.short}</span>
-            ))}
+            ))}{" "}
+            <div className="hero-actions hero-actions--rail">
+              <a href="#portfolio" className="btn primary">
+                {t("ctaPortfolio")}
+              </a>
+              <a href="#contact" className="btn ghost">
+                {t("ctaContact")}
+              </a>
+            </div>
           </div>
         </div>
 
@@ -62,7 +70,7 @@ export function Hero() {
               />
             </a>
           </div>
-          <div className="hero-actions">
+          <div className="hero-actions hero-actions--board">
             <a href="#portfolio" className="btn primary">
               {t("ctaPortfolio")}
             </a>
