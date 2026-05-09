@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useI18n } from './hooks/useI18n';
 import { NAV_SECTIONS } from './data';
 import { Hero } from './components/Hero';
@@ -72,7 +72,7 @@ function Navbar() {
 export default function App() {
   const { t } = useI18n();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     document.body.classList.add("motion-ready");
 
