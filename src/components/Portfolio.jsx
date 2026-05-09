@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { useI18n } from '../hooks/useI18n';
 import { PROJECTS, LANGUAGES } from '../data';
 
@@ -6,12 +6,24 @@ function PillToggle({ value, onChange, options }) {
   const { t } = useI18n();
   const ref = useRef(null);
   const [indicator, setIndicator] = useState({ left: 0, width: 0 });
+  const optionsKey = options.map((o) => `${o.value}:${o.label}`).join("|");
 
-  useEffect(() => {
-    if (!ref.current) return;
-    const el = ref.current.querySelector(`[data-val="${value}"]`);
-    if (el) setIndicator({ left: el.offsetLeft, width: el.offsetWidth });
-  }, [value, options.map((option) => option.label).join("|")]);
+  useLayoutEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+
+    const measure = () => {
+      const el = root.querySelector(`[data-val="${value}"]`);
+      if (el) setIndicator({ left: el.offsetLeft, width: el.offsetWidth });
+    };
+
+    measure();
+
+    if (typeof ResizeObserver === "undefined") return undefined;
+    const ro = new ResizeObserver(() => measure());
+    ro.observe(root);
+    return () => ro.disconnect();
+  }, [value, optionsKey]);
 
   return (
     <div className="pill-toggle" ref={ref} role="tablist" aria-label={t("portfolioViewLabel")}>
